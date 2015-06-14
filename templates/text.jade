@@ -1,0 +1,15 @@
+
+extends layout
+
+block prepend title
+  | #{ page.title + " - "}
+
+block content
+  section.article-content
+    h1.box__title
+      | #{page.title}
+
+    .box__content!= typogr(page.html).typogrify()
+
+
+

@@ -1,0 +1,234 @@
+@import '_fonts';
+@import '../bower_components/foundation/scss/normalize';
+@import '_settings';
+@import '_foundation';
+
+
+body {
+  text-align: center;
+}
+
+p {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+h1, h2, h3, .logo {
+  font-family: 'Lora', serif;
+}
+
+.header {
+  padding: 2rem 0 0;
+}
+
+.logo {
+  @extend h1;
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: .5rem;
+
+  a {
+    color: inherit;
+  }
+}
+
+.description {
+  @extend h3;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+
+  margin: 0 .5rem;
+
+  @media #{$medium-up} {
+    margin: 0 1rem;
+  }
+}
+
+.list-social {
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.list-social__item {
+  display: inline-block;
+
+  a {
+    text-indent: -999rem;
+  }
+}
+
+
+.box--header,
+.footer,
+.box--about,
+.projects,
+.tools,
+.article-content {
+  @include grid-row;
+}
+
+.footer {
+  margin-top: 2em;
+}
+
+.social {
+  padding: 4rem 0;
+}
+
+.about {
+  background: darken(#fff, 4%);
+  padding: 4rem 0 3rem;
+}
+
+.box__content--header,
+.box--footer,
+.box__content--about,
+.box--projects,
+.box--tools {
+  @include grid-column;
+  @extend .small-12;
+}
+
+.box--tools,
+.box--projects {
+  margin: 2em 0;
+}
+
+.box__title-wrap {
+  margin-bottom: 0;
+}
+
+.box--about,
+.box--social,
+.box--projects {
+  .box__title-wrap {
+    display: none;
+  }
+}
+
+.item-title--company,
+.box__title {
+  display: inline-block;
+  border-bottom: 1px solid $gainsboro;
+  padding: 0 2rem .5rem;
+
+  @media #{$medium-up} {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.item-title--company {
+  @extend h1;
+}
+
+
+// projects
+
+.list-company,
+.list-project {
+  list-style: none;
+  margin-left: 0;
+}
+
+.list-company {
+  padding: 2rem 0 1rem;
+  margin-bottom: 0;
+}
+
+.list-company__item {
+  padding: 1rem 0;
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+
+}
+
+.list-project__item {
+  padding: 0 0 3rem;
+
+  &:last-of-type {
+    border: 0;
+    padding-bottom: 2rem;
+  }
+
+  .item-title {
+    font-family: 'Merriweather Sans', sans-serif;
+  }
+}
+
+.list-tool {
+  margin: 0;
+}
+
+.list-tool__item {
+  @include label($text-size: 1rem);
+  @include label-style(darken(#fff, 8%), true);
+
+  margin: .40rem .25rem;
+  
+  a {
+    color: $jet;
+  }
+}
+
+
+// tools
+
+.tools {
+  .list-tool__item {
+    @include label($text-size: 1.2rem);
+    @include label-style(darken(#fff, 8%), true);
+    
+    margin: .50rem .25rem;
+  }
+}
+
+
+// tag detail
+
+.tag-detail {
+  .box__title-wrap {
+    display: inline-block;
+  }
+  
+  .box__title {
+    @include label($text-size: $h4-font-size);
+    @include label-style(darken(#fff, 8%), true);
+
+    margin-bottom: 1.5rem;
+    font-style: normal;
+  }
+}
+
+
+// sticky headers
+
+.title-wrap--sticky {
+  position: relative;
+  z-index: 0;
+}
+
+.title-wrap--sticky.fixed {
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+   top: 0;
+   left: 0;
+  
+  .box__title,
+  .item-title--company {
+    display: block;
+    background: rgba(#fff, .8);
+    margin: 0;
+  }
+}
+
+.title-wrap--sticky.fixed.absolute {
+  position: absolute;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "2015_ws_portfolio",
+  "version": "0.0.0",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "5.5.2"
+  }
+}

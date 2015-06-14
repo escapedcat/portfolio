@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora'), local('Lora-Regular'), url(../fonts/Lora/Lora-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lora Bold'), local('Lora-Bold'), url(../fonts/Lora/Lora-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather Sans Regular'), local('MerriweatherSans-Regular'), url(../fonts/Merriweather_Sans/MerriweatherSans-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Merriweather Sans Bold'), local('MerriweatherSans-Bold'), url(../fonts/Merriweather_Sans/MerriweatherSans-Bold.woff2) format('woff2');
+}

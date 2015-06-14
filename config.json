@@ -1,0 +1,33 @@
+{
+  "locals": {
+    "url": "http://localhost:8080",
+    "name": "Hannes Schluchtmann",
+    "owner": "Hannes Schluchtmann",
+    "description": "Frontend Developer and Consultant",
+    "metaDescription": "Frontend Developer and Consultant from Hamburg; currently in Beijing"
+  },
+  "plugins": [
+    "./plugins/paginator.coffee",
+    "wintersmith-autoprefixer-sass",
+    "wintersmith-tag"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 50
+  },
+  "tag": {
+    "template": "tag-index.jade",
+    "perPage": 50
+  }
+}

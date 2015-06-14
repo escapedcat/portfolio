@@ -1,0 +1,107 @@
+extends layout
+
+block content
+  section.social
+  
+    .box--social
+      .box__title-wrap
+        h1.box__title Social media
+
+      ul.list-social
+        li.list-social__item
+          a.webicon.twitter(href="https://twitter.com/escapedcat")
+            svg.icon.twitter
+              use(xlink:href="#twitter")
+            
+        li.list-social__item
+          a.webicon.github(href="https://github.com/escapedcat")
+            svg.icon.github
+              use(xlink:href="#github")
+            
+        li.list-social__item
+          a.webicon.stackoverflow(href="https://stackoverflow.com/users/1667461/escapedcat")
+            svg.icon.stackoverflow
+              use(xlink:href="#stackoverflow")
+            
+        li.list-social__item
+          a.webicon.linkedin(href="https://www.linkedin.com/in/hannesschluchtmann")
+            svg.icon.linkedin
+              use(xlink:href="#linkedin")
+            
+        li.list-social__item
+          a.webicon.slides(href="https://slides.com/escapedcat")
+            svg.icon.slides
+              use(xlink:href="#slides")
+  
+
+  section.about
+
+    .box--about
+      .box__title-wrap
+        h1.box__title About
+
+      .box__content--about
+        !=contents['about.md'].html
+
+
+  section.tools
+    - var tags = env.helpers.getAllTags()
+    .box--tools
+    
+      .box__title-wrap.title-wrap--sticky
+        h1.box__title Tools
+    
+      .box__content
+        p
+          | Currently my prefered stack is
+          a(href=foo)= Sass
+          | , Foundation and Angular.
+        p
+          | But tools are just tools. Important is to chose the tools which are best for your project.
+          | That's why I keep myself informed about the latest technologies to add new ones to my stack if needed.
+
+        ul.list-tool
+          each tag in tags
+            li.list-tool__item
+              a(href=env.helpers.getTagHome(tag).url)= tag
+
+
+  section.projects
+    .box--projects
+      .box__title-wrap
+        h1.box__title Projects
+
+      .box__content
+  
+        - var projectsByCompany = _.chain(env.helpers.getArticles(contents)).groupBy(function(item) {
+        -  return item.metadata.company
+        - }).value()
+        //- console.log(projectsByCompany)
+
+        ul.list-company
+          each grouped, company in projectsByCompany
+            li.list-company__item
+              
+              .item-title-wrap.title-wrap--sticky
+                h2.item-title.item-title--company= company
+  
+              ul.list-project
+                each item in grouped
+                  li.list-project__item
+                    
+                    .item-title-wrap
+                      h3.item-title #{item.title} 
+                        small #{item.date.getFullYear()}
+                    
+                    div.item-description
+                      !=typogr(item.html).typogrify()
+
+                    - var tags= env.helpers.getTagsFromArticle(item)
+                    
+                    .box__content
+                      ul.list-tool
+                        each tag in tags
+                          li.list-tool__item
+                            a(href=env.helpers.getTagHome(tag).url)= tag
+
+

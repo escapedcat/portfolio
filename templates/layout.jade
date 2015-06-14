@@ -1,0 +1,51 @@
+doctype html
+block vars
+  - var bodyclass = null;
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      meta(name='viewport', content='width=device-width')
+      title
+        block title
+          = locals.name
+      meta(name='description', content=locals.metaDescription)
+      link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
+      link(rel='stylesheet', href='/css/main.css')
+      
+      //
+        http://geek-and-poke.com/geekandpoke/2014/11/8/frameworks
+
+        oh, hi! you can find the source here:
+        https://github.com/escapedcat/portfolio
+
+
+  body(class=bodyclass)
+
+    include ../contents/img/icon-combined.svg
+
+    header.header
+      .box--header
+        block header
+          .box__content--header
+            p.logo
+              a(href=locals.url)= locals.name
+            p.description= locals.description
+    
+    block content
+      h2 Welcome to zombocom!
+    
+    footer.footer
+      .box--footer
+        block footer
+          section.copy
+            p &copy;#{ new Date().getFullYear() } #{ locals.owner } &mdash;
+              span powered by&nbsp;
+              a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+              span  and 
+              a(href='http://foundation.zurb.com') ZURB Foundation
+              span  | 
+              a(href='/impressum.html') Impressum (German)
+
+    script(src='/bower_components/jquery/dist/jquery.min.js')
+    script(src='/js/app.js')
