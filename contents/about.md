@@ -5,7 +5,7 @@ view: none
 Hi, I'm Hannes.  
 I'm a frontend developer and consultant.  
 
-Working on web related projects for over 10 years I went through the ups and downs of project management, client requirements, technical depth and internal communication. Nowadays this experience helps me to analyse requirements from the beginning and help clients to achieve better results.  
+Working on web related projects for over 10 years I went through the ups and downs of project management, client requirements, technical dept and internal communication. Nowadays this experience helps me to analyse requirements from the beginning and help clients to achieve better results.  
 
 Working in [SCRUM][1] / [Kanban][2] driven projects over the last years I understood that [Waterfall][3] never was a good way to approach software projects. So I mediate between departments, teams and people to make sure that everybody is understanding each other and is working towards an optimal solution.  
 
