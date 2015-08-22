@@ -1,4 +1,5 @@
 @import '_fonts';
+@import '_animate';
 @import '../bower_components/foundation/scss/normalize';
 @import '_settings';
 @import '_foundation';
@@ -56,10 +57,21 @@ h1, h2, h3, .logo {
 .list-social__item {
   display: inline-block;
 
+  animation-duration: .75s;
+  animation-fill-mode: both;
+  animation-name: bounceIn;
+
   a {
     text-indent: -999rem;
   }
 }
+
+@for $i from 1 through 5 {
+  .list-social__item:nth-of-type(#{$i}) {
+    animation-delay: ($i*1s)/5;
+  } 
+}
+
 
 
 .box--header,
