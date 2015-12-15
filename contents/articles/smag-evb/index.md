@@ -4,7 +4,7 @@ author: hannes
 company: Spot Media
 date: 2008-03-01 00:00
 template: article.jade
-tags: TYPO3, TypoSript, PHP, HTML, CSS, JavaScript, jQuery
+tags: TYPO3, TypoScript, PHP, HTML, CSS, JavaScript, jQuery
 ---
 
 Templating and CSS structure for the first version of [this community webpage for inventions][1].

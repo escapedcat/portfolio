@@ -66,7 +66,7 @@ h1, h2, h3, .logo {
   }
 }
 
-@for $i from 1 through 5 {
+@for $i from 1 through 6 {
   .list-social__item:nth-of-type(#{$i}) {
     animation-delay: ($i*1s)/5;
   } 
