@@ -138,6 +138,9 @@ h1, h2, h3, .logo {
   @extend h1;
 }
 
+.box__content p {
+  text-align: left;
+}
 
 // projects
 
@@ -171,6 +174,10 @@ h1, h2, h3, .logo {
 
   .item-title {
     font-family: 'Merriweather Sans', sans-serif;
+  }
+
+  .item-description {
+    text-align: left;
   }
 }
 
