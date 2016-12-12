@@ -18,30 +18,28 @@ function stickyTitles(stickies) {
   
     stickies.each(function(i){
       
-      
       var thisSticky = jQuery(this),
           nextSticky = stickies.eq(i+1),
           prevSticky = stickies.eq(i-1),
           pos = jQuery.data(thisSticky[0], 'pos');
 
-
       if (pos <= jQuery(window).scrollTop()) {
         
-        thisSticky.addClass("fixed");
+        thisSticky.addClass('fixed');
         
         if (nextSticky.length > 0 && thisSticky.offset().top >= jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight()) {
           
-          thisSticky.addClass("absolute").css("top", jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight());
+          thisSticky.addClass('absolute').css('top', jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight());
 
         }
         
       } else {
         
-        thisSticky.removeClass("fixed");
+        thisSticky.removeClass('fixed');
         
         if (prevSticky.length > 0 && jQuery(window).scrollTop() <= jQuery.data(thisSticky[0], 'pos')  - prevSticky.outerHeight()) {
         
-          prevSticky.removeClass("absolute").removeAttr("style");
+          prevSticky.removeClass('absolute').removeAttr('style');
         
         }       
       }
@@ -49,11 +47,11 @@ function stickyTitles(stickies) {
   };
 }
 
-jQuery(window).load(function(){
-  var newStickies = new stickyTitles(jQuery(".title-wrap--sticky"));
+jQuery(window).on('load', function(){
+  var newStickies = new stickyTitles(jQuery('.title-wrap--sticky'));
   newStickies.load();
     
-  jQuery(window).on("scroll", function() {
+  jQuery(window).on('scroll', function() {
     newStickies.scroll();
   }); 
 });

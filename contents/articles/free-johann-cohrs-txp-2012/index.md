@@ -8,7 +8,9 @@ tags: textpattern, jQuery, RequireJS, HTML, CSS, Bower, git
 ---
 
 Developed of the second version of [Johann Cohrs][3] CMS based website. This time including a basic RWD vesion. [Sebastian Kühnel][2] did the layout of this redesign.
-Build with [Textpattern][1] as well.
+Build with [Textpattern][1] as well.  
+  
+Link is outdated.
 
 [1]: http://textpattern.com
 [2]: http://www.sebastiankuehnel.com
